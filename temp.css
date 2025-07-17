@@ -1,0 +1,25 @@
+.tasks .task {
+    display: flex;
+    gap: 10px;
+}
+.tasks .task .task-text {
+    background-color: #ffffff;
+    padding: 10px;
+    flex-grow: 1;
+    font-size: .9em;
+}
+.tasks .task .delete {
+    align-self: center;
+    
+    padding: 7px 5px;
+    color: white;
+    background-color: #ff5959;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    border: none;
+    transition: background-color 150ms ease;
+}
+.tasks .task .delete:hover {
+    background-color: #fe3838;
+ }
