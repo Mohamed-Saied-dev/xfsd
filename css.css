@@ -1,0 +1,255 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+    
+}
+body {
+    background-color: #E6F0FA;
+    min-height: 1000px;
+}
+.container {
+    width: 90%;
+    max-width: 700px;
+    padding: 15px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+/* Phone Screen */
+@media (max-width: 600px) {
+    .container {
+        width: 95%;
+
+    }
+    .body {
+        font-size: 15px;
+    }
+}
+
+/* Medium Screen */
+@media (max-width: 900px) {
+    .container {
+        width: 80%;
+        padding: 18px;
+    }
+    .body {
+        font-size: 16px;
+    }
+}
+
+/* Large Screen */
+@media (min-width: 901px) {
+    .container {
+        width: 65%;
+        padding: 20px;
+    }
+    .body {
+        font-size: 18px;
+
+    }
+}
+
+form {
+    background-color: #F2F7FC;
+    padding: 16px;
+    margin-bottom: 40px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+.input {
+    width: 80%;
+    height: 40px;
+    padding-left: 10px;
+    border-radius: 5px;
+    margin-right: 10px;
+    border: 2px solid rgb(225, 224, 224);
+    outline: none;
+    transition: border-color .3s ease;
+    background-color: #ffffff;
+}
+.input:focus {
+    border-color: #ff6B6B;
+    box-shadow: 0 0 5px rgba(255, 107, 107, 0.3);
+}
+.add {
+    height: 40px;
+    padding: 5px;
+    color: white;
+    background-color: #ff5959;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    border: none;
+    transition: background-color 150ms ease;
+}
+.add:hover {
+    background-color: #fe3838;
+}
+.tasks {
+    background-color: #f0f7ff;
+    padding: 25px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+    display: grid;
+    gap: 10px;
+}
+.tasks .task {
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #d3e6fc;
+    
+
+}
+.tasks .task .task-text {
+    padding: 10px;
+    background-color: #ffffff;
+    flex-grow: 1;
+    font-size: .9em;
+    border-radius: 5px;
+    
+}
+.tasks .task .delete {
+    align-self: center;
+    padding: 7px 5px;
+    color: white;
+    background-color: #ff5959;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    border: none;
+    transition: background-color 150ms ease;
+}
+.tasks .task .delete:hover {
+    background-color: #fe3838;
+}
+.author-card {
+  position: relative;
+  overflow: hidden;
+  max-width: 700px;
+  margin: 60px auto;
+  padding: 80px 20px 50px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #a2d2ff, #cdb4db);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.2);
+  transform: rotateX(15deg) scale(0.9);
+  animation: entryZoomRotate 1.2s ease forwards;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.author-card:hover {
+  transform: scale(1) rotate(0deg);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.25);
+}
+
+.bg-skew {
+  position: absolute;
+  top: -100px;
+  left: -150px;
+  width: 200%;
+  height: 350px;
+  background: linear-gradient(120deg, #ff9a9e, #fad0c4, #a18cd1, #fbc2eb);
+  background-size: 400% 400%;
+  transform: skewY(-12deg);
+  z-index: 0;
+  animation: bgWave 5s ease-in-out infinite alternate;
+}
+
+.author-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: #333;
+}
+
+.author-img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 6px solid white;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  transition: transform 0.4s ease;
+  animation: pulseImg 2.5s infinite ease-in-out;
+}
+
+.author-img:hover {
+  transform: scale(1.08) rotate(2deg);
+}
+
+.author-name {
+  font-size: 32px;
+  margin-top: 25px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  color: #222;
+  animation: textPop 1s ease-out 0.8s forwards;
+  opacity: 0;
+}
+
+.author-role {
+  font-size: 16px;
+  letter-spacing: 1px;
+  margin-top: 10px;
+  padding: 0 15px;
+  animation: fadeInUp 1.5s ease-in 1s forwards;
+  opacity: 0;
+}
+
+/* ==== Animations ==== */
+
+@keyframes entryZoomRotate {
+  0% {
+    transform: rotateX(30deg) scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    transform: rotateX(0deg) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes bgWave {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes pulseImg {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+}
+
+@keyframes textPop {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
